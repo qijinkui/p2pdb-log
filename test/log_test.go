@@ -7,12 +7,13 @@ import (
 	"testing"
 	"time"
 
+	p2pks "p2pdb-log/keystore"
+
 	ipfslog "berty.tech/go-ipfs-log"
 	"berty.tech/go-ipfs-log/entry"
 	"berty.tech/go-ipfs-log/errmsg"
 	idp "berty.tech/go-ipfs-log/identityprovider"
 	"berty.tech/go-ipfs-log/iface"
-	ks "berty.tech/go-ipfs-log/keystore"
 	dssync "github.com/ipfs/go-datastore/sync"
 	mocknet "github.com/libp2p/go-libp2p/p2p/net/mock"
 	"github.com/stretchr/testify/require"
@@ -27,7 +28,7 @@ func TestLog(t *testing.T) {
 	defer closeNode()
 
 	datastore := dssync.MutexWrap(NewIdentityDataStore(t))
-	keystore, err := ks.NewKeystore(datastore)
+	keystore, err := p2pks.NewKeystore(datastore)
 	require.NoError(t, err)
 
 	var identities []*idp.Identity

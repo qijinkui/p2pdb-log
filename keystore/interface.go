@@ -1,4 +1,4 @@
-package keystore // import "berty.tech/go-ipfs-log/keystore"
+package keystore
 
 import crypto "github.com/libp2p/go-libp2p-core/crypto"
 
