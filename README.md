@@ -29,6 +29,7 @@ GSet是一个非常简单的CRDT，p2pdb-log 使用它实现事件日志记录
 
 
 
+
 #### 事件顺序
 事件在写入Merkle DAG时，可以嵌入一些用于排序的参数，如lamport lock， 向量时钟，版本时钟，merkle-clock, last write win等,
 在merge两个并发产生的事件时，用户可根据实际场景选择采用哪一种排序条件作为顺序判断规则,如果内置的排序条件不足以满足实际场景，用户可自行
@@ -41,10 +42,11 @@ GSet是一个非常简单的CRDT，p2pdb-log 使用它实现事件日志记录
 
 
 
+
 ## 风险注意
 如果您耐心看完任何一种逻辑时钟的实现，也许会发现无论任何一种逻辑时钟的实现，都无法严格的保证在并发情况下，事件具有因果关系并且按照真实物理发生的顺序
 进行排序，如同狭义相对论指出，我们的时空中的事件并不存在一个始终如一的全序关系，不同的观察者对两个事件谁先发生可能具有不同的看法，仅当事件A是由事件B
-引起的时候，事件AB才具有一个准确的先后顺序，如果应用对于顺序一致性的有强烈的要求，那么你应当考虑选用强一致协议，如Raft、Paxos等。
+引起的时候，事件AB才具有一个准确的先后顺序，如果业务对于顺序一致性的有强烈的要求，那么你应当考虑选用强一致协议数如Raft、Paxos等实现的数据库。
 
 ## 部分代码参考来源
 [go-ipfs-log](https://github.com/berty/go-ipfs-log)
@@ -55,3 +57,5 @@ GSet是一个非常简单的CRDT，p2pdb-log 使用它实现事件日志记录
 
 *p2pdb-log* is licensed under the Apache License, Version 2.0.
 See [LICENSE](LICENSE) for the full license text.
+
+
