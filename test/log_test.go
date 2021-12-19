@@ -10,9 +10,9 @@ import (
 	p2pks "p2pdb-log/keystore"
 
 	dssync "github.com/ipfs/go-datastore/sync"
+	ipfslog "github.com/kkugan/p2pdb-log"
 	mocknet "github.com/libp2p/go-libp2p/p2p/net/mock"
 	"github.com/stretchr/testify/require"
-	ipfslog "p2pdb-log"
 	"p2pdb-log/entry"
 	"p2pdb-log/errmsg"
 	idp "p2pdb-log/identityprovider"
