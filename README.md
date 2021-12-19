@@ -8,8 +8,12 @@
 [Merkle-CRDT](https://research.protocol.ai/blog/2019/a-new-lab-for-resilient-networks-research/PL-TechRep-merkleCRDT-v0.1-Dec30.pdf)
 
 ### 运行测试
-```
+``` 
+//test one 
 go run test.go log.go log_io.go
+
+//test many 
+go run test_logs.go log.go log_io.go
 ```
 ### 内容列表 
 
