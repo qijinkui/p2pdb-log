@@ -4,7 +4,6 @@ go 1.15
 
 require (
 	berty.tech/go-ipfs-log v1.5.0
-	//	berty.tech/go-ipfs-log v0.0.0
 	github.com/ipfs/go-datastore v0.4.5
 	github.com/ipfs/go-ipfs v0.9.1
 	github.com/ipfs/go-ipfs-config v0.14.0
@@ -13,7 +12,7 @@ require (
 	github.com/libp2p/go-libp2p-peerstore v0.2.7
 )
 
-// replace berty.tech/go-ipfs-log v0.0.0 => ../
+replace berty.tech/go-ipfs-log v0.0.0 => ../
 
 replace github.com/golangci/golangci-lint => github.com/golangci/golangci-lint v1.18.0
 
