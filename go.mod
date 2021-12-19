@@ -1,4 +1,4 @@
-module p2pdb-log
+module github.com/kkguan/p2pdb-log
 
 go 1.15
 
