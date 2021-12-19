@@ -1,4 +1,4 @@
-package entry // import "berty.tech/go-ipfs-log/entry"
+package entry // import "berty.tech/go-ipfs-p2pdblog/entry"
 
 import (
 	"context"
@@ -8,13 +8,13 @@ import (
 	"github.com/ipfs/go-cid"
 	core_iface "github.com/ipfs/interface-go-ipfs-core"
 
-	"berty.tech/go-ipfs-log/iface"
-	"berty.tech/go-ipfs-log/io/cbor"
+	"p2pdb-log/iface"
+	"p2pdb-log/io/cbor"
 )
 
 type FetchOptions = iface.FetchOptions
 
-// FetchParallel retrieves IPFS log entries.
+// FetchParallel retrieves IPFS p2pdblog entries.
 func FetchParallel(ctx context.Context, ipfs core_iface.CoreAPI, hashes []cid.Cid, options *FetchOptions) []iface.IPFSLogEntry {
 	var (
 		entries        = []iface.IPFSLogEntry(nil)
@@ -210,7 +210,7 @@ func FetchAll(ctx context.Context, ipfs core_iface.CoreAPI, hashes []cid.Cid, op
 		// Load the entry
 		entry, err := FromMultihashWithIO(ctx, ipfs, hash, options.Provider, options.IO)
 		if err != nil {
-			// TODO: log
+			// TODO: p2pdblog
 			return
 		}
 

@@ -7,7 +7,10 @@
 基于默克尔-CRDT实现的只允许追加的日志组件
 [Merkle-CRDT](https://research.protocol.ai/blog/2019/a-new-lab-for-resilient-networks-research/PL-TechRep-merkleCRDT-v0.1-Dec30.pdf)
 
-
+### 运行测试
+```
+go run test.go log.go log_io.go
+```
 ### 内容列表 
 
 

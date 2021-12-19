@@ -4,9 +4,9 @@ import (
 	"encoding/hex"
 	"github.com/ipfs/go-cid"
 
-	"berty.tech/go-ipfs-log/errmsg"
-	"berty.tech/go-ipfs-log/identityprovider"
-	"berty.tech/go-ipfs-log/iface"
+	"p2pdb-log/errmsg"
+	"p2pdb-log/identityprovider"
+	"p2pdb-log/iface"
 )
 
 // Entry CBOR representable version of Entry

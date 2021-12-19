@@ -1,10 +1,8 @@
-package example
+package main
 
 import (
 	"context"
 	"fmt"
-	"io/ioutil"
-
 	"github.com/ipfs/go-datastore"
 	dssync "github.com/ipfs/go-datastore/sync"
 	config "github.com/ipfs/go-ipfs-config"
@@ -15,15 +13,15 @@ import (
 	"github.com/libp2p/go-libp2p"
 	"github.com/libp2p/go-libp2p-core/host"
 	"github.com/libp2p/go-libp2p-core/peer"
-	pstore "github.com/libp2p/go-libp2p-peerstore"
+	pstore "github.com/libp2p/go-libp2p-core/peerstore"
+	"io/ioutil"
 	idp "p2pdb-log/identityprovider"
 	"p2pdb-log/keystore"
-
-	log "berty.tech/go-ipfs-log"
 )
 
-func buildHostOverrideExample(ctx context.Context, id peer.ID, ps pstore.Peerstore, options ...libp2p.Option) (host.Host, error) {
-	return ipfs_libp2p.DefaultHostOption(ctx, id, ps, options...)
+func buildHostOverrideExample(id peer.ID, ps pstore.Peerstore, options ...libp2p.Option) (host.Host, error) {
+
+	return ipfs_libp2p.DefaultHostOption(id, ps, options...)
 }
 
 func newRepo() (ipfs_repo.Repo, error) {
@@ -60,12 +58,13 @@ func buildNode(ctx context.Context) (*ipfs_core.IpfsNode, error) {
 	}
 
 	return ipfs_core.NewNode(ctx, cfg)
+
 }
 
-func Example_logAppend() {
+func main() {
 	ctx := context.Background()
 
-	// Build Ipfs Node A
+	// // Build Ipfs Node A
 	nodeA, err := buildNode(ctx)
 	if err != nil {
 		panic(err)
@@ -77,7 +76,7 @@ func Example_logAppend() {
 		panic(err)
 	}
 
-	nodeBInfo := pstore.PeerInfo{
+	nodeBInfo := peer.AddrInfo{
 		ID:    nodeB.Identity,
 		Addrs: nodeB.PeerHost.Addrs(),
 	}
@@ -127,7 +126,7 @@ func Example_logAppend() {
 	}
 
 	// creating p2pdblog
-	logA, err := log.NewLog(serviceA, identityA, &log.LogOptions{ID: "A"})
+	logA, err := NewLog(serviceA, identityA, &LogOptions{ID: "A"})
 	if err != nil {
 		panic(err)
 	}
@@ -143,13 +142,13 @@ func Example_logAppend() {
 		panic(fmt.Errorf("ToMultihash error: %s", err))
 	}
 
-	res, err := log.NewFromMultihash(ctx, serviceB, identityB, h, &log.LogOptions{}, &log.FetchOptions{})
+	res, err := NewFromMultihash(ctx, serviceB, identityB, h, &LogOptions{}, &FetchOptions{})
 	if err != nil {
 		panic(fmt.Errorf("NewFromMultihash error: %s", err))
 	}
 
 	// nodeB lookup logA
 	fmt.Println(res.ToString(nil))
-
+	fmt.Println("1000")
 	// Output: hello world
 }

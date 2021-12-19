@@ -1,7 +1,7 @@
-package accesscontroller // import "berty.tech/go-ipfs-log/accesscontroller"
+package accesscontroller // import "berty.tech/go-ipfs-p2pdblog/accesscontroller"
 
 import (
-	"berty.tech/go-ipfs-log/identityprovider"
+	"p2pdb-log/identityprovider"
 )
 
 type LogEntry interface {

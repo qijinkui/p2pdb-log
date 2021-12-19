@@ -1,5 +1,5 @@
 // Package entry defines the Entry structure for IPFS Log and its associated methods.
-package entry // import "berty.tech/go-ipfs-log/entry"
+package entry // import "berty.tech/go-ipfs-p2pdblog/entry"
 
 import (
 	"context"
@@ -11,10 +11,10 @@ import (
 	core_iface "github.com/ipfs/interface-go-ipfs-core"
 	"github.com/multiformats/go-multibase"
 
-	"berty.tech/go-ipfs-log/errmsg"
-	"berty.tech/go-ipfs-log/identityprovider"
-	"berty.tech/go-ipfs-log/iface"
-	"berty.tech/go-ipfs-log/io/cbor"
+	"p2pdb-log/errmsg"
+	"p2pdb-log/identityprovider"
+	"p2pdb-log/iface"
+	"p2pdb-log/io/cbor"
 )
 
 type Entry struct {

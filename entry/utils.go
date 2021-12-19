@@ -1,8 +1,8 @@
-package entry // import "berty.tech/go-ipfs-log/entry"
+package entry // import "berty.tech/go-ipfs-p2pdblog/entry"
 
 import (
-	"berty.tech/go-ipfs-log/iface"
 	"bytes"
+	"p2pdb-log/iface"
 	"sort"
 )
 

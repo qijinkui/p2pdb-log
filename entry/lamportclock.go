@@ -1,10 +1,10 @@
-package entry // import "berty.tech/go-ipfs-log/entry"
+package entry // import "berty.tech/go-ipfs-p2pdblog/entry"
 
 import (
 	"bytes"
 	"math"
 
-	"berty.tech/go-ipfs-log/iface"
+	"p2pdb-log/iface"
 )
 
 type LamportClock struct {

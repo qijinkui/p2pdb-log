@@ -1,12 +1,12 @@
 package cbor
 
 import (
-	"berty.tech/go-ipfs-log/enc"
 	"context"
 	"encoding/base64"
 	"fmt"
 	"github.com/ipfs/go-ipld-cbor/encoding"
 	"math"
+	"p2pdb-log/enc"
 
 	"github.com/ipfs/go-cid"
 	cbornode "github.com/ipfs/go-ipld-cbor"
@@ -16,10 +16,10 @@ import (
 	ic "github.com/libp2p/go-libp2p-core/crypto"
 	"github.com/polydawn/refmt/obj/atlas"
 
-	"berty.tech/go-ipfs-log/errmsg"
-	"berty.tech/go-ipfs-log/identityprovider"
-	"berty.tech/go-ipfs-log/iface"
-	"berty.tech/go-ipfs-log/io/jsonable"
+	"p2pdb-log/errmsg"
+	"p2pdb-log/identityprovider"
+	"p2pdb-log/iface"
+	"p2pdb-log/io/jsonable"
 )
 
 type IOCbor struct {

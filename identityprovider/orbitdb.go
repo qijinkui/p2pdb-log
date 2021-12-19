@@ -1,12 +1,12 @@
-package identityprovider // import "berty.tech/go-ipfs-log/identityprovider"
+package identityprovider // import "berty.tech/go-ipfs-p2pdblog/identityprovider"
 
 import (
 	"encoding/hex"
 
 	"github.com/libp2p/go-libp2p-core/crypto"
 
-	"berty.tech/go-ipfs-log/errmsg"
-	"berty.tech/go-ipfs-log/keystore"
+	"p2pdb-log/errmsg"
+	"p2pdb-log/keystore"
 )
 
 type OrbitDBIdentityProvider struct {

@@ -8,10 +8,10 @@ import (
 	dag "github.com/ipfs/go-merkledag"
 	core_iface "github.com/ipfs/interface-go-ipfs-core"
 
-	"berty.tech/go-ipfs-log/errmsg"
-	idp "berty.tech/go-ipfs-log/identityprovider"
-	"berty.tech/go-ipfs-log/iface"
-	"berty.tech/go-ipfs-log/io/jsonable"
+	"p2pdb-log/errmsg"
+	idp "p2pdb-log/identityprovider"
+	"p2pdb-log/iface"
+	"p2pdb-log/io/jsonable"
 )
 
 type pb struct {

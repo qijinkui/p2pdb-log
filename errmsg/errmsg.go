@@ -1,5 +1,5 @@
 // Package errmsg defines error messages used by the Go version of IPFS Log.
-package errmsg // import "berty.tech/go-ipfs-log/errmsg"
+package errmsg // import "berty.tech/go-ipfs-p2pdblog/errmsg"
 
 import (
 	"fmt"
@@ -17,7 +17,7 @@ const (
 	ErrCBOROperationFailed          = Error("CBOR operation failed")
 	ErrCIDSerializationFailed       = Error("CID deserialization failed")
 	ErrClockDeserialization         = Error("unable to deserialize clock")
-	ErrEmptyLogSerialization        = Error("can't serialize an empty log")
+	ErrEmptyLogSerialization        = Error("can't serialize an empty p2pdblog")
 	ErrEntriesNotDefined            = Error("entries not defined")
 	ErrEntryDeserializationFailed   = Error("entry deserialization failed")
 	ErrEntryNotDefined              = Error("entry is not defined")
@@ -46,17 +46,17 @@ const (
 	ErrKeyStoreInitFailed           = Error("keystore initialization failed")
 	ErrKeyStorePutFailed            = Error("keystore put failed")
 	ErrKeystoreNotDefined           = Error("keystore not defined")
-	ErrLogAppendDenied              = Error("log append denied")
-	ErrLogAppendFailed              = Error("log append failed")
+	ErrLogAppendDenied              = Error("p2pdblog append denied")
+	ErrLogAppendFailed              = Error("p2pdblog append failed")
 	ErrLogFromEntry                 = Error("new from entry failed")
 	ErrLogFromEntryHash             = Error("new from multi hash failed")
 	ErrLogFromJSON                  = Error("new from JSON failed")
 	ErrLogFromMultiHash             = Error("new from entry hash failed")
-	ErrLogIDNotDefined              = Error("log ID not defined")
-	ErrLogJoinFailed                = Error("log join failed")
-	ErrLogJoinNotDefined            = Error("log to join not defined")
-	ErrLogOptionsNotDefined         = Error("log options not defined")
-	ErrLogTraverseFailed            = Error("log traverse failed")
+	ErrLogIDNotDefined              = Error("p2pdblog ID not defined")
+	ErrLogJoinFailed                = Error("p2pdblog join failed")
+	ErrLogJoinNotDefined            = Error("p2pdblog to join not defined")
+	ErrLogOptionsNotDefined         = Error("p2pdblog options not defined")
+	ErrLogTraverseFailed            = Error("p2pdblog traverse failed")
 	ErrMultibaseOperationFailed     = Error("Multibase operation failed")
 	ErrNotSecp256k1PubKey           = Error("supplied key is not a valid Secp256k1 public key")
 	ErrOutputChannelNotDefined      = Error("no output channel specified")
@@ -67,7 +67,7 @@ const (
 	ErrSigNotDefined                = Error("signature is not defined")
 	ErrSigNotVerified               = Error("signature could not verified")
 	ErrSigSign                      = Error("unable to sign value")
-	ErrTiebreakerBogus              = Error("log's tiebreaker function has returned zero and therefore cannot be")
+	ErrTiebreakerBogus              = Error("p2pdblog's tiebreaker function has returned zero and therefore cannot be")
 	ErrTiebreakerFailed             = Error("tiebreaker failed")
 	ErrIPFSWriteFailed              = Error("ipfs write failed")
 	ErrIPFSReadFailed               = Error("ipfs read failed")

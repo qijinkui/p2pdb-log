@@ -1,5 +1,5 @@
 // Package identityprovider defines a default identity provider for IPFS Log and OrbitDB.
-package identityprovider // import "berty.tech/go-ipfs-log/identityprovider"
+package identityprovider // import "berty.tech/go-ipfs-p2pdblog/identityprovider"
 
 import (
 	ic "github.com/libp2p/go-libp2p-core/crypto"

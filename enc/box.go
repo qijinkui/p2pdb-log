@@ -1,11 +1,11 @@
 package enc
 
 import (
-	"berty.tech/go-ipfs-log/errmsg"
 	"crypto/rand"
 	"fmt"
 	"golang.org/x/crypto/nacl/secretbox"
 	"golang.org/x/crypto/sha3"
+	"p2pdb-log/errmsg"
 )
 
 const (
